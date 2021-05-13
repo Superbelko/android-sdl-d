@@ -1,0 +1,43 @@
+{
+	"authors": [
+		"Superbelko"
+	],
+	"copyright": "Copyright © 2021, Superbelko",
+	"dependencies": {
+		"bindbc-sdl": "~>0.21.2"
+	},
+	"description": "SDL2 Android demo project",
+	"dflags": [
+		"-g"
+	],
+	"license": "proprietary",
+	"name": "android-sdl",
+	"targetName": "main",
+	"targetType": "dynamicLibrary",
+	"versions": [ "SDL206" ],
+
+	"configurations": [
+		{
+			"name": "android-arm64",
+			"platforms": ["android-aarch64"],
+			"targetPath": "app/libs/arm64-v8a",
+			"dflags": [ "-linker=bfd", "--link-defaultlib-debug=true" ],
+			"libs": ["log"]
+		},
+		{
+			"name": "android-armv7a",
+			"platforms": ["android-arm"],
+			"targetPath": "app/libs/armeabi-v7a",
+			"dflags": [ "-linker=bfd", "--link-defaultlib-debug=true" ],
+			"libs": ["log"]
+		},
+		{
+			"name": "default",
+			"platforms": ["windows", "macos", "linux"]
+		}
+	],
+
+	"subConfigurations": {
+		"bindbc-sdl": "dynamicBC"
+	}
+}
