@@ -10,7 +10,7 @@
 	"dflags": [
 		"-g"
 	],
-	"license": "proprietary",
+	"license": "unlicense",
 	"name": "android-sdl",
 	"targetName": "main",
 	"targetType": "dynamicLibrary",
